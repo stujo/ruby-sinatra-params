@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="margin: 0; padding: 5px;">
+
+<div class="info" style="
+position: absolute; 
+right: 0px; 
+border-left: 2px solid #F44; 
+padding-left: 5px; 
+width:600px; 
+overflow: scroll;">
+<h3>Params</h3>
+<pre><%=  JSON.pretty_generate(params) %></pre>
+<h3>Request Contents</h3>
+<pre><%=  JSON.pretty_generate(request.env) %></pre>
+</div>
+
+
+<h3>Link</h3>
+<a href="/?message=hello%20world">Hello World</a>
+
+<h3>Form GET</h3>
+<form action="/" method="GET">
+<input type="text" value="Mary" name="first_name" placeholder="First Name"/>
+<input type="text" value="Jones" name="last_name" placeholder="Last Name"/>
+<input type="submit"/>
+</form>
+
+<h3>Form POST</h3>
+<form action="/" method="POST">
+<input type="text" value="Penny" name="first_name" placeholder="First Name"/>
+<input type="text" value="Powell" name="last_name" placeholder="Last Name"/>
+<input type="submit"/>
+</form>	
+
+
+</body>
+</html>
